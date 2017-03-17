@@ -26,14 +26,10 @@
         $qu = "SELECT * FROM users WHERE email = '" . htmlspecialchars($_POST["email"]) . "'";
 
         // query database for user
-        $result = $mysqli -> query($qu);
-        $rows = $result -> fetch_array();
-        
         // if we found user, check password
-        if (count($rows) == 1)
+        if ($result = $mysqli -> query($qu))
         {
-            // first (and only) row
-            $row = $rows[0];
+            $row = $result -> fetch_array();
 
             // compare hash of user's input against hash that's in database
             if (password_verify($_POST["pass"], $row["pass"]))
