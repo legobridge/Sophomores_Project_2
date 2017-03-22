@@ -7,7 +7,7 @@
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("login.php");
+            redirect("/login.php");
         }
     }
     
