@@ -1,6 +1,6 @@
 <?php
 
-    require_once("../models/config.php");
+    require_once("../models/db.php");
     require_once("session.php");
 
     /**

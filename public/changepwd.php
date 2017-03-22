@@ -23,8 +23,7 @@
         }
         else
         {
-            $qu = "UPDATE users SET pass = '" . password_hash($_POST["pass"], PASSWORD_DEFAULT) . "' WHERE id = '" . $_SESSION["id"] . "'";
-            $mysqli -> query($qu);
+            update_password($_SESSION["id"], $_POST["pass"]);
             redirect("/");
         }
     }
