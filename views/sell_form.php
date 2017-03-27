@@ -1,4 +1,4 @@
-<form action="sell.php" method="post">
+<form id="sell_form" action="sell.php" method="post">
     <fieldset>
         <div>
             <select name="category">

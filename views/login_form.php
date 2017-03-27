@@ -1,4 +1,4 @@
-<form action="login.php" method="post">
+<form id="login_form" action="login.php" method="post">
     <fieldset>
         <div>
             <input autofocus name="email" placeholder="E-Mail" type="text"/>

@@ -11,8 +11,12 @@
     function login($email, $pass)
    	{
         global $mysqli;
+
+        // Escape user entered strings
         $email = $mysqli -> real_escape_string($email);
         $pass = $mysqli -> real_escape_string($pass);
+        
+        // Formulate query string
         $qu = "SELECT * FROM users WHERE email = '$email'";
         
         if ($result = $mysqli -> query($qu))
@@ -30,7 +34,29 @@
    	function register($email, $name, $gender, $pass, $college)
    	{
         global $mysqli;
-        
+
+        // Escape user entered strings
+        $email = $mysqli -> real_escape_string($email);
+        $name = $mysqli -> real_escape_string($name);
+        $gender = $mysqli -> real_escape_string($gender);
+        $pass = $mysqli -> real_escape_string(password_hash($pass, PASSWORD_DEFAULT));
+        $college = $mysqli -> real_escape_string($college);
+
+        // Formulate query string
+        $qu = "INSERT IGNORE INTO `users` (`email`, `name`, `gender`, `pass`, `college`) VALUES('$email', '$name', '$gender', '$pass', '$college')";
+
+        if ($result = $mysqli -> query($qu))
+        {
+            $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
+            $rows = $result -> fetch_array();
+
+            // Log in the user by storing user's ID in session
+            $_SESSION["id"] = $result;
+
+            // Redirect to dashboard
+            redirect("/");
+        }
+        apologize("E-Mail already exists in database, please try again.");
    	}
 
     function update_password($id, $pass)
@@ -44,7 +70,7 @@
     function sell($cat, $name, $desc, $contact, $price)
     {
         global $mysqli;
-        
+
         // Get session id
         $id = $_SESSION["id"];
 
