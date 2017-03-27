@@ -13,13 +13,20 @@
     // else if user reached page via POST (as by submitting a form via POST)
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        register(
+        if(register(
             $_POST['email'],
             $_POST['name'],
             $_POST['gender'],
             $_POST['pass'],
             $_POST['college']
-            );
+            ))
+        {
+            // Redirect to dashboard
+            redirect('/');
+        }
+
+        // else apologize
+        apologize("E-Mail already exists in database, please try again.");
     }
 
 ?>

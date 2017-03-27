@@ -1,4 +1,4 @@
-<form id="sell_form" action="sell.php" method="post">
+<form id="sell_form" action="sell.php" method="post" enctype="multipart/form-data">
     <fieldset>
         <div>
             <select name="category">
@@ -28,8 +28,11 @@
         <div>
             <input name="price" placeholder="Your Price (in Rs.)" type="text"/>
         </div>
+        <div>
+            <input type="hidden" name="MAX_FILE_SIZE" value="300000"/>
+        </div>
         <div>Upload Image: 
-            <input name="picture" placeholder="Your Image" type="file" accept="image/*"/>
+            <input name="picture" placeholder="Your Image" type="file"/>
         </div>
         <div>
             <button type="submit">

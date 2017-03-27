@@ -51,12 +51,11 @@
             $rows = $result -> fetch_array();
 
             // Log in the user by storing user's ID in session
-            $_SESSION["id"] = $result;
+            $_SESSION["id"] = $rows["id"];
 
-            // Redirect to dashboard
-            redirect("/");
+            return TRUE;
         }
-        apologize("E-Mail already exists in database, please try again.");
+        return FALSE;
    	}
 
     function update_password($id, $pass)
@@ -86,7 +85,13 @@
         $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date')";
         $mysqli -> query($qu);
 
-        // Upload image file (TODO)
-        
+        // Upload image file
+        $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
+        $rows = $result -> fetch_array();
+        $target_file = "../models/img/" . $rows["id"];
+        if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+        {
+            apologize("Sorry, there was an error uploading your file.");
+        }
     }
 ?>
