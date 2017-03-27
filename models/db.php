@@ -41,4 +41,26 @@
         $mysqli -> query($qu);
     }
 
+    function sell($cat, $name, $desc, $contact, $price)
+    {
+        global $mysqli;
+        
+        // Get session id
+        $id = $_SESSION["id"];
+
+        // Escape user entered strings
+        $cat = $mysqli -> real_escape_string($cat);
+        $name = $mysqli -> real_escape_string($name);
+        $desc = $mysqli -> real_escape_string($desc);
+        $contact = $mysqli -> real_escape_string($contact);
+        $price = $mysqli -> real_escape_string($price);
+        $date = $mysqli -> real_escape_string(date('F d, Y'));
+
+        // Formulate query string
+        $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date')";
+        $mysqli -> query($qu);
+
+        // Upload image file (TODO)
+        
+    }
 ?>
