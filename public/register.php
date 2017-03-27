@@ -25,21 +25,29 @@
         {
             apologize("the entered passwords must match.");
         }
+        
+        // Escape user entered strings
+        $email = $mysqli -> real_escape_string($_POST['email']);
+        $name = $mysqli -> real_escape_string($_POST['name']);
+        $gender = $mysqli -> real_escape_string($_POST['gender']);
+        $pass = $mysqli -> real_escape_string(password_hash($_POST['pass'], PASSWORD_DEFAULT));
+        $college = $mysqli -> real_escape_string($_POST['college']);
+
+        // Formulate query string
+        $qu = "INSERT IGNORE INTO `users` (`email`, `name`, `gender`, `pass`, `college`) VALUES('$email', '$name', '$gender', '$pass', '$college')";
+
+        $result = $mysqli -> query($qu);
+
+        if ($result === FALSE)
+        {
+            apologize("E-Mail already exists in database, please try again.");
+        }
         else
         {
-            $qu = "INSERT IGNORE INTO `users` (email, name, gender, pass, college) VALUES('" . $_POST['email'] . "', '" . $_POST['name'] . "', '" . $_POST['gender'] . "', '" . password_hash($_POST['pass'], PASSWORD_DEFAULT) . "', '" . $_POST['college'] . "')";
-            $result = $mysqli -> query($qu);
-            if ($result === FALSE)
-            {
-                apologize("E-Mail already exists in database, please try again.");
-            }
-            else
-            {
-                $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
-                $rows = $result -> fetch_array();
-                $_SESSION["id"] = $rows[0]["id"];
-                redirect("/");
-            }
+            $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
+            $rows = $result -> fetch_array();
+            $_SESSION["id"] = $rows[0]["id"];
+            redirect("/");
         }
     }
 

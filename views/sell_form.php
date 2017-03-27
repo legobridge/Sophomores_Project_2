@@ -1,7 +1,19 @@
 <form action="sell.php" method="post">
     <fieldset>
         <div>
-            <input autofocus name="name" placeholder="Item Title (Min. length 4 characters)" type="text"/>
+            <select name="category">
+            <option selected disabled hidden>Select Category</option>
+            <option value="books">Books</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="furniture">Furniture</option>
+            <option value="sports">Sports</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="others">Others</option>
+        </select>
+        </div>
+        <div>
+            <input name="name" placeholder="Item Title (Min. length 4 characters)" type="text"/>
         </div>
         <div>
             <input name="description" placeholder="Item Description (Max. length 200 characters)" type="text"/>
@@ -15,6 +27,9 @@
         </div>
         <div>
             <input name="price" placeholder="Your Price (in Rs.)" type="text"/>
+        </div>
+        <div>Upload Image: 
+            <input name="picture" placeholder="Your Image" type="file" accept="image/*"/>
         </div>
         <div>
             <button type="submit">

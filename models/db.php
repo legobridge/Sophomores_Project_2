@@ -10,19 +10,35 @@
 
     function login($email, $pass)
    	{
+        global $mysqli;
+        $email = $mysqli -> real_escape_string($email);
+        $pass = $mysqli -> real_escape_string($pass);
+        $qu = "SELECT * FROM users WHERE email = '$email'";
+        
+        if ($result = $mysqli -> query($qu))
+        {
+            $row = $result -> fetch_array();
 
+            // Compare hash of user's input against hash that's in database
+            if (password_verify($pass, $row["pass"]))
+                return $row["id"];
+            else
+                return FALSE;
+        }
    	}
 
    	function register($email, $name, $gender, $pass, $college)
    	{
-
+        global $mysqli;
+        
    	}
 
     function update_password($id, $pass)
     {
-    	$qu = "UPDATE users SET pass = '" . password_hash($pass, PASSWORD_DEFAULT) . "' WHERE id = '" . $id . "'";
-	    global $mysqli;
-	    $mysqli -> query($qu);
+        global $mysqli;
+        $new_pass = password_hash($pass, PASSWORD_DEFAULT);
+        $qu = "UPDATE users SET pass = '$pass' WHERE id = '$id'";
+        $mysqli -> query($qu);
     }
 
 ?>

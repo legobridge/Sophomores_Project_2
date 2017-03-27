@@ -21,11 +21,8 @@
         {
             apologize("the entered passwords must match.");
         }
-        else
-        {
-            update_password($_SESSION["id"], $_POST["pass"]);
-            redirect("/");
-        }
+        update_password($_SESSION["id"], $_POST["pass"]);
+        redirect("/");
     }
 
 ?>

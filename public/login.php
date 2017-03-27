@@ -13,7 +13,7 @@
     // else if user reached page via POST (as by submitting a form via POST)
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        // validate submission
+        // Validate submission
         if (empty($_POST["email"]))
         {
             apologize("You must provide your E-Mail.");
@@ -23,23 +23,17 @@
             apologize("You must provide your password.");
         }
 
-        $qu = "SELECT * FROM users WHERE email = '" . htmlspecialchars($_POST["email"]) . "'";
 
-        // query database for user
-        // if we found user, check password
-        if ($result = $mysqli -> query($qu))
+        // Query database and attempt login
+        // if details match, do the following
+        $login_result = login($_POST["email"], $_POST["pass"]);
+        if ($login_result !== FALSE)
         {
-            $row = $result -> fetch_array();
-
-            // compare hash of user's input against hash that's in database
-            if (password_verify($_POST["pass"], $row["pass"]))
-            {
-                // remember that user is now logged in by storing user's ID in session
-                $_SESSION["id"] = $row["id"];
-
-                // redirect to dashboard
-                redirect("/");
-            }
+            // Remember that user is now logged in by storing user's ID in session
+            $_SESSION["id"] = $login_result;
+            
+            // Redirect to dashboard
+            redirect("/");
         }
 
         // else apologize
