@@ -1,4 +1,4 @@
-<form id="change_pwd" action="/Project_2/public/changepwd.php" method="post">
+<form id="change_pwd" action="../public/changepwd.php" method="post">
     <fieldset>
         <div>
             <input name="pass" placeholder="Password" type="password"/>

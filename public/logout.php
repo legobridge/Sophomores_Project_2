@@ -3,10 +3,10 @@
     // configuration
     require("../controllers/helpers.php"); 
 
-    // log out current user, if any
+    // Log out current user, if any
     logout();
 
-    // redirect user
-    redirect("/Project_2/public/");
+    // Redirect user to home page
+    redirect("dashboard.php");
 
 ?>

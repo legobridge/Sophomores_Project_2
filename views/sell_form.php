@@ -1,4 +1,4 @@
-<form id="sell_form" action="/Project_2/public/sell.php" method="post" enctype="multipart/form-data">
+<form id="sell_form" action="../public/sell.php" method="post" enctype="multipart/form-data">
     <fieldset>
         <div>
             <select name="category">
