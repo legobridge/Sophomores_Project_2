@@ -1,4 +1,4 @@
-<form id="registration_form" action="register.php" method="post">
+<form id="registration_form" action="/Project_2/public/register.php" method="post">
     <fieldset>
         <div>
             <input autofocus name="email" placeholder="E-Mail" type="text"/>
@@ -27,5 +27,5 @@
     </fieldset>
 </form>
 <div>
-    or <a href="login.php">log in</a> to an account
+    or <a href="/Project_2/public/login.php">log in</a> to an account
 </div>
