@@ -6,7 +6,7 @@
 
     require_once("../controllers/helpers.php");
 
-    $mysqli = new mysqli("localhost", "sysadmin", "v1kCjsvLYytrBTGV", "ohelex");
+    $mysqli = new mysqli("localhost", "jharvard", "crimson", "ohelex");
 
     function login($email, $pass)
    	{
