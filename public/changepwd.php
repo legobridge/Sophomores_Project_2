@@ -19,7 +19,7 @@
             );
             
         // Redirect to dashboard
-        redirect("/");
+        redirect("/Project_2/public/");
     }
 
 ?>

@@ -23,7 +23,7 @@
             $_SESSION["id"] = $login_result;
             
             // Redirect to dashboard
-            redirect("/");
+            redirect("/Project_2/public/");
         }
 
         // else apologize

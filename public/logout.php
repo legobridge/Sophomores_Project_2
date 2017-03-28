@@ -7,6 +7,6 @@
     logout();
 
     // redirect user
-    redirect("/");
+    redirect("/Project_2/public/");
 
 ?>
