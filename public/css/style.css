@@ -175,3 +175,13 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
+#category{
+margin-right:auto;
+margin-left:auto;
+width:520px;
+height:30px;
+}
+#picturebutton{
+height:45px;
+font-size:20px;
+}

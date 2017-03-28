@@ -1,6 +1,7 @@
-       html,body{
-           height:102%;
-           background-color:#333;
+html,body{
+   height:102%;
+   background-color:#333;
+    
         }
    .firstrow
    {
@@ -9,25 +10,29 @@
 
 #navigation
 {
- background-color:#333;
+ background-color:black;
  position:relative;
  height:30px;
- left:-40px;
+ 
  top:-15px;
+}
+a{
+text-decoration:none;
 }
 #navigation li
 {
  width:100%;
- background-color:lime;
+ background-color:grey;
  color:red;
  list-style:none;
  font-weight:bold;
  color:black;
  border-right:1px solid #990000;
  font-size:30px;
- 
+ margin-right:155px; 
  padding:0px 10px 0px 10px;
  display:inline;
+ text-decoration:none;
 }
 #category{
 background-color:#EAD5E1;
@@ -64,7 +69,7 @@ top:-30px;
 height:40px;
 color:blue;
 }
-.footerwrapper{ background:#EAD5E1; border-top:4px solid #a8aaad; padding-bottom:40px;margin-left:auto;margin-right:auto;font-size:20px;position:relative;top:-35px}
+
 .stick-to-left{
 float:left;
 }
@@ -89,3 +94,48 @@ margin-right:10px;
 	float:right;
 }
 
+footer {
+margin-top:-45px;
+height: 200px;
+background-color: #f8fafa;
+}
+#wrapper {
+padding: 60px 0;
+height: 100px;
+background-color: #f8fafa;
+}
+#footer-info {
+width: 380px;
+float: left;
+margin-top: 10px;
+}
+footer p {
+font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+line-height: 20px;
+margin-bottom: 20px;
+}
+#footer-links {
+width: 520px;
+float: right;
+display:inline;
+}
+#footer-links ul {
+height:200px;
+float: left;
+margin-left: 20px;
+}
+ul {
+list-style-type: none;
+}
+#footer-links ul li {
+margin: 10px 0;
+}
+footer li {
+display: list-item;
+}
+footer h5 {
+font-size: 15px;
+color: #444;
+font-weight: bold;
+text-transform: uppercase;
+}

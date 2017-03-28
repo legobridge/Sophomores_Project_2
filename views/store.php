@@ -11,6 +11,7 @@
 <div id="orange"><br/>Submit!</div>
 </form>
 </div>
+<div id="navcol">
 <nav>
 <div id="navigation">
 <ul>
@@ -23,6 +24,7 @@
 </ul>
 </div>
 </nav>
+</div>
 <!--
 Now to have various category
 
@@ -87,23 +89,37 @@ Now do catgeory wise exclusive product shows
 <img src="" alt="Keyboard" onhover="Keyboard">
 </div>
 </div>
-<div class="footerwrapper">
- <ul class="stick-to-left">
- <li>Terms and Conditions</li>
- <li>Our Policy</li>
- <li>Customer Service</li>
- <li>Merchant Policy</li>
- <li>Contact Us</li>
- </ul>
-  <ul class="stick-to-right">
-      <li>Connect to Us</li>
-      <li>Facebook</li>
-      <li>Instagram</li>
-      <li>Twitter</li>
-      <li>Blog</li>
-  </ul>
-</div>
-
-<div class="footer" id="footer">
+<footer>
+	<div class="wrapper">
+		<div id="footer-info">
+			<p>Copyright 2017 CompanyName. All rights reserved.</p>
+			<p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
+		</div>
+		<div id="footer-links">
+			<ul>
+				<li><h5>Company</h5></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Meet The Team</a></li>
+				<li><a href="#">What We Do</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+			<ul>
+				<li><h5>Company</h5></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Meet The Team</a></li>
+				<li><a href="#">What We Do</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+			<ul>
+				<li><h5>Company</h5></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Meet The Team</a></li>
+				<li><a href="#">What We Do</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</footer><div class="footer" id="footer">
 <center><a href="#top"><button id="back">Back to Top</button></a></center>
 </div>

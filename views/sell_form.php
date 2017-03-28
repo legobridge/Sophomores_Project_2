@@ -2,22 +2,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Sign-Up/Login Form</title>
+  <title>Selling Form</title>
   <link rel="stylesheet" href="../public/css/style.css">    
 </head>
 <body>
  <div class="form">
        <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        
       </ul>
       <div class="tab-content">
         <div id="sign" style="display:inline">   
-          <h1>Sign Up for Free</h1>
+          <h1>Sell Your Product</h1>
           
           <form action="sell.php" method="post" name="myForm" onsubmit="return validateForm();">
           
            <div>
-            <select name="category">
+            <select name="category" id="category">
             <option selected disabled hidden>Select Category</option>
             <option value="books">Books</option>
             <option value="clothing">Clothing</option>
@@ -28,7 +28,7 @@
             <option value="others">Others</option>
            </select>
            </div>
-          
+           <br>
            <div class="field-wrap">
     
               <input autofocus name="name" placeholder="Item Title (Min. length 4 characters)" type="text"/>
@@ -46,7 +46,7 @@
           </div>
           
           <div class="field-wrap">
-           <textarea name="description" form="myform">Item Description (Max. length 200 characters)</textarea>
+           <textarea name="description" form="myform" placeholder="Item Description (Max. length 200 characters)"></textarea>
           </div>
           
           <div class="gender">
@@ -54,7 +54,7 @@
             <input type="radio" name="donate" value="no"> I want to sell<br>
           </div>
           <div class="field-wrap">
-          <input name="picture" placeholder="Your Image" type="file"/>          
+          <input name="picture" placeholder="Your Image" class="button button-block" id ="picturebutton"type="file"/>          
           </div>
           <button type="submit" class="button button-block"/>Post Advertisement</button>
           
