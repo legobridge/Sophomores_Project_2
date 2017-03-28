@@ -62,7 +62,7 @@
     {
         global $mysqli;
         $new_pass = password_hash($pass, PASSWORD_DEFAULT);
-        $qu = "UPDATE users SET pass = '$pass' WHERE id = '$id'";
+        $qu = "UPDATE users SET pass = '$new_pass' WHERE id = '$id'";
         $mysqli -> query($qu);
     }
 
