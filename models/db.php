@@ -82,7 +82,7 @@
         $date = $mysqli -> real_escape_string(date('F d, Y'));
 
         // Formulate query string
-        $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date')";
+        $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`, `user_id`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date', '$id')";
         $mysqli -> query($qu);
 
         // Upload image file
