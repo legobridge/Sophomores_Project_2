@@ -1,3 +1,6 @@
+<?php 
+    //dump($values); 
+?>
 <div id="heading">
 <a name="top"></a>
 <figure>
