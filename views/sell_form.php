@@ -37,11 +37,7 @@
           </div>
           
           <div class="field-wrap">
-<<<<<<< HEAD
             <input name="price" placeholder="Your Price (in Rs.)" type="number" required/>
-=======
-           <textarea name="description" form="myform" placeholder="Item Description (Max. length 200 characters)" maxlength="200"></textarea>
->>>>>>> 61b4682d0911a6e88ffdc5b0c70fa1d95aa4115d
           </div>
           
           <div class="gender">
