@@ -5,7 +5,7 @@
         <div id="sign" style="display:inline">   
           <center><h1>Login Form</h1></center>
           
-          <form action="sell.php" method="post" name="myForm">
+          <form action="../public/login.php" method="post" name="myForm">
            <div class="field-wrap">
               <input autofocus name="email" placeholder="E-Mail" type="email" required/>
             </div>
