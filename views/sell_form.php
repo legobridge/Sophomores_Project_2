@@ -6,7 +6,7 @@
         <div id="sign" style="display:inline">
           <h1>Sell Your Product</h1>
           
-          <form action="sell.php" method="post" name="myForm" onsubmit="return validateForm(); required">
+          <form action="sell.php" method="post" id="sell" name="myForm" onsubmit="return validateForm(); required">
           
         <div>
             <select name="category" id="category">
@@ -27,6 +27,10 @@
               <input autofocus name="name" placeholder="Item Title (Min. length 4 characters)" type="text" minlength="4" required/>
             </div>
           
+          <div class="field-wrap">
+            <textarea form="sell" name="description" form="myform" placeholder="Item Description (Max. length 200 characters)" maxlength="200"></textarea>
+          </div>
+          
 
           <div class="field-wrap">
            <input name="contact" placeholder="Contact Info" type="text" required/>
@@ -34,10 +38,6 @@
           
           <div class="field-wrap">
             <input name="price" placeholder="Your Price (in Rs.)" type="number" required/>
-          </div>
-          
-          <div class="field-wrap">
-           <textarea name="description" form="myform" placeholder="Item Description (Max. length 200 characters)" maxlength="10"></textarea>
           </div>
           
           <div class="gender">
