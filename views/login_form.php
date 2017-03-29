@@ -1,18 +1,26 @@
-<form id="login_form" action="/Project_2/public/login.php" method="post">
-    <fieldset>
-        <div>
-            <input autofocus name="email" placeholder="E-Mail" type="text"/>
-        </div>
-        <div>
-            <input name="pass" placeholder="Password" type="password"/>
-        </div>
-        <div>
-            <button type="submit">
-                Log In
-            </button>
-        </div>
-    </fieldset>
-</form>
+ <div class="form">
+       <ul class="tab-group">
+      </ul>
+      <div class="tab-content">
+        <div id="sign" style="display:inline">   
+          <center><h1>Login Form</h1></center>
+          
+          <form action="../public/login.php" method="post" name="myForm">
+           <div class="field-wrap">
+              <input autofocus name="email" placeholder="E-Mail" type="email" required/>
+            </div>
+          <div class="field-wrap">
+           
+           <input name="pass" placeholder="Password" type="password" minlength="4" required/>
+          </div>
+          <button type="submit" class="button button-block"/>Login</button>
+          
+          </form>
+          
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+<br>
 <div>
-    or <a href="/Project_2/public/register.php">register</a> for an account
+    or <a href="../public/register.php">register</a> for an account
 </div>
