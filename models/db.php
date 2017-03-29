@@ -85,13 +85,61 @@
         $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`, `user_id`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date', '$id')";
         $mysqli -> query($qu);
 
-        // Upload image file
+        /* Upload image file
         $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
         $rows = $result -> fetch_array();
         $target_file = "../models/img/" . $rows["id"];
         if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
         {
             apologize("Sorry, there was an error uploading your file.");
-        }
+        }*/
     }
+    
+    function get_category_items($category)
+   	{
+        global $mysqli;
+        echo "boobs";
+        echo $category;
+        
+        // Formulate query string
+        if ($category == 'all')
+        {
+            $qu = "SELECT * FROM `store`";
+        }
+        else
+        {
+            $qu = "SELECT * FROM `store` WHERE `category` = '$category'";
+        }
+        
+        // Fetch associative array of items
+        $rows = [];
+        if ($result = $mysqli -> query($qu))
+        {
+            while ($row = $result -> fetch_assoc()) 
+            {
+                $rows[] = $row;
+            }
+        }
+        return $rows;
+   	}
+    
+    function get_user_items($id)
+   	{
+        global $mysqli;
+
+        // Formulate query string
+        $qu = "SELECT * FROM `store` WHERE `user_id` = $id";        
+        
+        // Fetch associative array of items
+        $rows = [];
+        if ($result = $mysqli -> query($qu))
+        {
+            while ($row = $result -> fetch_assoc()) 
+            {
+                $rows[] = $row;
+            }
+        }
+        return $rows;
+   	}
+   	
 ?>

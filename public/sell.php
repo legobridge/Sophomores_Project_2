@@ -13,7 +13,6 @@
     // else if user reached page via POST (as by submitting a form via POST)
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        dump($_POST);
         sell(
             $_POST["category"],
             $_POST["name"],
