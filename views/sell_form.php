@@ -14,11 +14,11 @@
         <div id="sign" style="display:inline">   
           <h1>Sell Your Product</h1>
           
-          <form action="sell.php" method="post" name="myForm" onsubmit="return validateForm();">
+          <form action="sell.php" method="post" name="myForm" onsubmit="return validateForm(); required">
           
            <div>
             <select name="category" id="category">
-            <option selected disabled hidden>Select Category</option>
+            <option selected disabled hidden value="">Select Category</option>
             <option value="books">Books</option>
             <option value="clothing">Clothing</option>
             <option value="electronics">Electronics</option>
@@ -31,22 +31,22 @@
            <br>
            <div class="field-wrap">
     
-              <input autofocus name="name" placeholder="Item Title (Min. length 4 characters)" type="text"/>
+              <input autofocus name="name" placeholder="Item Title (Min. length 4 characters)" type="text" minlength="4" required/>
             </div>
           
 
           <div class="field-wrap">
            
-           <input name="contact" placeholder="Contact Info" type="text"/>
+           <input name="contact" placeholder="Contact Info" type="text" required/>
           </div>
           
           <div class="field-wrap">
             
-            <input name="price" placeholder="Your Price (in Rs.)" type="text"/>
+            <input name="price" placeholder="Your Price (in Rs.)" type="number" required/>
           </div>
           
           <div class="field-wrap">
-           <textarea name="description" form="myform" placeholder="Item Description (Max. length 200 characters)"></textarea>
+           <textarea name="description" form="myform" placeholder="Item Description (Max. length 200 characters)" maxlength="10"></textarea>
           </div>
           
           <div class="gender">

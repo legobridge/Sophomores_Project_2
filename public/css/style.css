@@ -104,7 +104,7 @@ label.highlight {
   color: #ffffff;
 }
 
-input[type=text],input[type=password],input[type=email], textarea {
+input[type=text],input[type=password],input[type=email],input[type=number], textarea {
   font-size: 22px;
   display: block;
   width: 100%;

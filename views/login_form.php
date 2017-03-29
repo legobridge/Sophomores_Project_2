@@ -13,13 +13,13 @@
         <div id="sign" style="display:inline">   
           <center><h1>Login Form</h1></center>
           
-          <form action="sell.php" method="post" name="myForm" onsubmit="return validateForm();">
+          <form action="sell.php" method="post" name="myForm">
            <div class="field-wrap">
-              <input autofocus name="email" placeholder="E-Mail" type="text"/>
+              <input autofocus name="email" placeholder="E-Mail" type="email" required/>
             </div>
           <div class="field-wrap">
            
-           <input name="pass" placeholder="Password" type="password"/>
+           <input name="pass" placeholder="Password" type="password" minlength="4" required/>
           </div>
           <button type="submit" class="button button-block"/>Login</button>
           
@@ -29,8 +29,6 @@
      
       </div><!-- tab-content -->
 </div> <!-- /form -->
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="../public/js/index.js"></script>
 </body>
 </html>
 <div>
