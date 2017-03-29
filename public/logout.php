@@ -7,6 +7,6 @@
     logout();
 
     // Redirect user to home page
-    redirect("dashboard.php");
+    redirect("./index.php");
 
 ?>

@@ -23,7 +23,7 @@
             $_SESSION["id"] = $login_result;
             
             // Redirect to dashboard
-            redirect("dashboard.php");
+            redirect("./index.php");
         }
 
         // else apologize

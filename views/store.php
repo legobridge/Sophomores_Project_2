@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../public/css/homestyle.css">     
-
 <div id="heading">
 <a name="top"></a>
 

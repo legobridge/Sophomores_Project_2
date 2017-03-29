@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Selling Form</title>
-  <link rel="stylesheet" href="../public/css/style.css">    
-</head>
-<body>
  <div class="form">
        <ul class="tab-group">
       </ul>
@@ -24,13 +16,11 @@
           <button type="submit" class="button button-block"/>Login</button>
           
           </form>
-
-        
-     
+          
       </div><!-- tab-content -->
+      
 </div> <!-- /form -->
-</body>
-</html>
+<br>
 <div>
     or <a href="../public/register.php">register</a> for an account
 </div>

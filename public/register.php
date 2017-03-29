@@ -22,7 +22,7 @@
             ))
         {
             // Redirect to dashboard
-            redirect('dashboard.php');
+            redirect('./index.php');
         }
 
         // else apologize

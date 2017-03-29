@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Sign-Up Form</title>
-  <link rel="stylesheet" href="../public/css/style.css">
-    
-</head>
-
-<body>
-  <div class="form">
-      
-     
-      
+<div class="form">      
       <div class="tab-content">
         <div id="signup" background-color:"white">   
           <h1>Sign Up for Free</h1>
           
-          <form action="/" method="post" name="myForm" onsubmit="return validate(); required">
+          <form action="../public/register.php" method="post" name="myForm" onsubmit="return validate(); required">
           
          
             <div class="field-wrap">
@@ -26,7 +13,7 @@
         
             <div class="field-wrap">
               
-               <input name="name" placeholder="Name*" pattern="[a-zA-Z]{3,}" type="text" required/>
+               <input name="name" placeholder="Name*" pattern="[a-z A-Z]{3,}" type="text" required/>
             </div>
          
 
@@ -53,19 +40,11 @@
           <button type="submit" class="button button-block"/>Get Started</button>
           <p id"message"></p>
           </form>
-            <center>or <a href="../public/login.php">Log in</a> to an account</center>          
         </div>
         <div id="log">
-         
         </div>
       </div><!-- tab-content -->
-      
 </div> <!-- /form -->
-
-
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="../public/js/index.js"></script>
-
-</body>
-</html>
+<div>
+    or <a href="../public/login.php">login</a> to an account
+</div>
