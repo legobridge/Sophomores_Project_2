@@ -6,7 +6,7 @@
         <div id="sign" style="display:inline">
           <h1>Sell Your Product</h1>
           
-          <form action="sell.php" method="post" id="sell" name="myForm" onsubmit="return validateForm(); required">
+          <form action="sell.php" method="post" id="sell" name="myForm" enctype="multipart/form-data" onsubmit="return validateForm(); required">
           
         <div>
             <select name="category" id="category">
@@ -39,13 +39,17 @@
           <div class="field-wrap">
             <input name="price" placeholder="Your Price (in Rs.)" type="number" required/>
           </div>
-          
+          <br>
           <div class="gender">
-              <input type="radio" name="donate" value="yes" checked> I want to donate<br>
-              <input type="radio" name="donate" value="no"> I want to sell<br>
+              <input type="radio" name="donate" value="yes" checked> I want to donate
+              <br>
+              <input type="radio" name="donate" value="no"> I want to sell
+              <br>
           </div>
+          <br>
           <div class="field-wrap">
-            <input name="picture" placeholder="Your Image" class="button button-block" id ="picturebutton"type="file"/>          
+            <h2> Upload Image : </h2>
+            <br><input name="picture" placeholder="Your Image" class="button button-block" id ="picturebutton" type="file"/>          
           </div>
           <button type="submit" class="button button-block"/>Post Advertisement</button>
           
