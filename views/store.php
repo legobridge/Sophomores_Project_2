@@ -1,11 +1,11 @@
 <div id="heading">
 <a name="top"></a>
-
 <figure>
-<img src="../public/img/images2.jpg" width=100% height=70%>
-<img style='vertical-align:middle;width:20%;height:5%' src='../public/img/frontlogo.png'>
+<img src="../public/img/images2.jpg" width=100% height=30%><br>
+<img style='vertical-align:middle;width: 10%;
+height: 35px;' src='../public/img/frontlogo.png'>
 <div style='vertical-align:bottom; display:inline-block;'>
-<form><input type="text" name="search"  style="float:left" placeholder="Search..">
+<form><input type="text" name="search"  id="search" style="float:left" placeholder="Search..">
 <div id="orange"><br/>Submit!</div>
 </form>
 </div>
@@ -109,3 +109,4 @@ Make all horizontal
 </footer><div class="footer" id="footer">
 <center><a href="#top"><button id="back">Back to Top</button></a></center>
 </div>
+

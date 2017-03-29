@@ -51,7 +51,7 @@ top:-30px;
  ul li{
  list-style:none;
  }
- input[type=text] {
+ #search {
     width: 1310px;
     height:5%;
     margin-bottom:-15px;
