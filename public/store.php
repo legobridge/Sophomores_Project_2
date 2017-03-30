@@ -13,7 +13,7 @@
     
     $rows = get_category_items($category);
     
-    $rows["title"] = "Store";
+    $rows["title"] = strtoupper($category);
     
     render("store.php", $rows);
 ?>

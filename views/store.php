@@ -1,6 +1,3 @@
-<?php 
-    // dump($values); 
-?>
 
 <div id="navcol">
     <nav>
@@ -17,76 +14,53 @@
         </div>
     </nav>
 </div>
+<?php 
+   // dump($values);
+?>
 
-<center>
-    <div class="products" style="max-width:900px;display:inline-block">
-                <h1>Best of Fashion</h1>
-				<div class="cl">&nbsp;</div>
-				<ul>
-				    <li>
-				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
-				    	<div class="product-info">
-				    		<h3>Manchester</h3>
-				    		<div class="product-desc">
-								<h4>WOMEN’S</h4>
-				    			<p>Woolen Jacket<br /></p>
-				    			<strong class="price">6000</strong>
-				    		</div>
-				    	</div>
-			    	</li>
-			    	<li>
-				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
-				    	<div class="product-info">
-				    		<h3>Being Human</h3>
-				    		<div class="product-desc">
-								<h4>MEN’S</h4>
-				    			<p>Men's Jacket and class<br /></p>
-				    			<strong class="price">6000</strong>
-				    		</div>
-				    	</div>
-			    	</li>
-			    	<li class="last">
-				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
-				    	<div class="product-info">
-				    		<h3>Levis</h3>
-				    		<div class="product-desc">
-								<h4>Casual</h4>
-				    			<p>Comfort of class<br /></p>
-				    			<strong class="price">6000</strong>
-				    		</div>
-				    	</div>
-			    	</li>
-			    	<li>
-				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
-				    	<div class="product-info">
-				    		<h3>Manchester</h3>
-				    		<div class="product-desc">
-								<h4>WOMEN’S</h4>
-				    			<p>Woolen Jacket<br /></p>
-				    			<strong class="price">6000</strong>
-				    		</div>
-				    	</div>
-			    	</li>
-			    	<li>
-				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
-				    	<div class="product-info">
-				    		<h3>Manchester</h3>
-				    		<div class="product-desc">
-								<h4>WOMEN’S</h4>
-				    			<p>Woolen Jacket<br /></p>
-				    			<strong class="price">6000</strong>
-				    		</div>
-				    	</div>
-			    	</li>
-				</ul>
-				<div class="cl">&nbsp;</div>
-			</div>
-			<!-- End Products -->
-		</div>
-</center>
+<div id="storetitle">
+    <?php 
+       $store_title = "<div id=\"storetitle\">" . $values["title"] . "</div>";
+       echo $store_title;
+    ?>
+</div>
+
+<?php
+    $num_values = sizeof($values);
+    if ($num_values == 1)
+    {
+        echo "<div id=\"sorrynoitems\">Sorry, there are no items for sale.</div>";
+    }
+    else
+    {
+        $table_header = "<table id=\"storeitems\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th>No.</th>\n\t\t\t<th>Picture</th>\n\t\t\t<th>Item Name</th>\n\t\t\t<th>Item Description</th>\n\t\t\t<th>Price</th>\n\t\t\t<th>College</th>\n\t\t\t<th>Date Added</th>\n\t\t\t<th>Contact</th>\n\t\t</tr>\n\t</thead>\n<tbody>\n";
+        echo $table_header;
+        $count = 1;
+        while ($count < $num_values)
+        {
+            $name = $values[$count - 1]["name"];
+            $store_id = $values[$count - 1]["id"];
+            $img_target = "../models/img/" . $store_id;
+            if (!file_exists($img_target))
+            {
+                $img_target = "../models/img/default.jpg";
+            }
+            $description = $values[$count - 1]["description"];
+            $price = $values[$count - 1]["price"];
+            $college = $values[$count - 1]["college"];
+            $date = $values[$count - 1]["date"];
+            $contact = $values[$count - 1]["contact"];
+            $table_row = "\t<tr>\n\t<td>" . $count . "</td>\n\t<td><img class='itemimage' src='$img_target'></td>\n\t<td>" . $name . "</td>\n\t<td>" . $description . "</td>\n\t<td>" . $price . "</td>\n\t<td>" . $college . "</td>\n\t<td>" . $date . "</td>\n\t<td>" . $contact . "</td>\n</tr>";
+            echo $table_row;
+            $count++;
+        }
+        $table_footer = "\t</tbody>\n</table>\n";
+        echo $table_footer;
+    }
+?>
+
 <!-- End Content -->
 
-</div>
 <footer>
 	<div class="wrapper">
 		<div id="footer-info">

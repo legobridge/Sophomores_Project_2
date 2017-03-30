@@ -1,5 +1,10 @@
 <br>
-<div id="welcome"> Welcome to OhElEx! </div>
+<div id="welcome">
+    Welcome to OhElEx! 
+    <br>
+    My Items:
+    <br>
+</div>
 <br>
 
 <?php
@@ -25,7 +30,7 @@
             $description = $values[$count - 1]["description"];
             $price = $values[$count - 1]["price"];
             $date = $values[$count - 1]["date"];
-            $table_row = "\t<tr>\n\t<td>" . $count . "</td>\n\t<td><img src='$img_target'></td>\n\t<td>" . $name . "</td>\n\t<td>" . $description . "</td>\n\t<td>" . $price . "</td>\n\t<td>" . $date . "</td>\n</tr>\n";
+            $table_row = "\t<tr>\n\t<td>" . $count . "</td>\n\t<td><img class='itemimage' src='$img_target'></td>\n\t<td>" . $name . "</td>\n\t<td>" . $description . "</td>\n\t<td>" . $price . "</td>\n\t<td>" . $date . "</td>\n</tr>\n";
             echo $table_row;
             $count++;
         }

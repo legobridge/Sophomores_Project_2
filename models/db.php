@@ -79,20 +79,29 @@
         $desc = $mysqli -> real_escape_string($desc);
         $contact = $mysqli -> real_escape_string($contact);
         $price = $mysqli -> real_escape_string($price);
+        $result = $mysqli -> query("SELECT * FROM `users` WHERE `id` = $id");
+        $college = "BITS Pilani Hyderabad Campus";
+        if ($row = $result -> fetch_assoc())
+        {
+            $college = $row["college"];
+        }
         $date = $mysqli -> real_escape_string(date('F d, Y'));
 
         // Formulate query string
-        $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `date`, `user_id`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$date', '$id')";
+        $qu = "INSERT into `store` (`category`, `name`, `description`, `contact`, `price`, `college`, `date`, `user_id`) VALUES('$cat', '$name', '$desc', '$contact', '$price', '$college', '$date', '$id')";
         // Process Query
         $mysqli -> query($qu);
         
         // Upload image file
-        $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
-        $rows = $result -> fetch_array();
-        $target_file = "../models/img/" . $rows["id"];
-        if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+        if (!empty($_FILES["picture"]["tmp_name"]))
         {
-            apologize("Sorry, there was an error uploading your file.");
+            $result = $mysqli -> query("SELECT LAST_INSERT_ID() AS id");
+            $rows = $result -> fetch_array();
+            $target_file = "../models/img/" . $rows["id"];
+            if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
+            {
+                apologize("Sorry, there was an error uploading your file.");
+            }
         }
     }
     
