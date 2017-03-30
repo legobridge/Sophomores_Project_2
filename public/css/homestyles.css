@@ -15,14 +15,14 @@ html,body{
  height:35px;
  
 }
-a{
+a>li{
 text-decoration:none;
 }
 #navigation li
 {
  width:100%;
  background-color:grey;
- color:red;
+ 
  list-style:none;
  font-weight:bold;
  color:black;
@@ -119,7 +119,7 @@ display:inline;
 }
 #footer-links ul {
 height:200px;
-float: left;
+float: right;
 margin-left: 20px;
 }
 ul {
@@ -128,12 +128,21 @@ list-style-type: none;
 #footer-links ul li {
 margin: 10px 0;
 }
+#footer-links>ul>li>a{
+color:red;
+}
+#footer-info>p{
+color:black;
+}
+#footer-info>p>a{
+color:red;
+}
 footer li {
 display: list-item;
 }
 footer h5 {
 font-size: 15px;
-color: #444;
+color: black;
 font-weight: bold;
 text-transform: uppercase;
 }
@@ -155,6 +164,8 @@ ul {
 }
 .products{
 background-color:white;
+max-width:900px;
+display:inline-block;
 }
 .products ul li {
     position: relative;
@@ -166,11 +177,7 @@ background-color:white;
     height: 383px;
     overflow: hidden;
 }
-a {
-    color: #8b0000;
-    text-decoration: underline;
-    cursor: pointer;
-}
+
 .product-info {
     position: absolute;
     width: 153px;

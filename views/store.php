@@ -3,14 +3,6 @@
 ?>
 <div id="heading">
 <a name="top"></a>
-<figure>
-<img src="../public/img/images2.jpg" width=100% height=30%><br>
-<img style='vertical-align:middle;width: 10%;
-height: 35px;' src='../public/img/frontlogo.png'>
-<div style='vertical-align:bottom; display:inline-block;'>
-<form><input type="text" name="search"  id="search" style="float:left" placeholder="Search..">
-<div id="orange"><br/>Submit!</div>
-</form>
 </div>
 <div id="navcol">
 <nav>
@@ -32,7 +24,7 @@ Now to have various category
 First Category-Top Sales like Kindle,PS4,Music Player,Jackets
 Make all horizontal
 -->
-<div class="products">
+<center><div class="products" style="max-width:900px;display:inline-block">
                 <h1>Best of Fashion</h1>
 				<div class="cl">&nbsp;</div>
 				<ul>
@@ -69,12 +61,34 @@ Make all horizontal
 				    		</div>
 				    	</div>
 			    	</li>
+			    	<li>
+				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
+				    	<div class="product-info">
+				    		<h3>Manchester</h3>
+				    		<div class="product-desc">
+								<h4>WOMEN’S</h4>
+				    			<p>Woolen Jacket<br /></p>
+				    			<strong class="price">6000</strong>
+				    		</div>
+				    	</div>
+			    	</li>
+			    	<li>
+				    	<a href="#"><img src="../public/img/big1.jpg" alt="" /></a>
+				    	<div class="product-info">
+				    		<h3>Manchester</h3>
+				    		<div class="product-desc">
+								<h4>WOMEN’S</h4>
+				    			<p>Woolen Jacket<br /></p>
+				    			<strong class="price">6000</strong>
+				    		</div>
+				    	</div>
+			    	</li>
 				</ul>
 				<div class="cl">&nbsp;</div>
 			</div>
 			<!-- End Products -->
 			<!-- Add other contents here like books,games....-->
-		</div>
+		</div></center>
 		<!-- End Content -->
 
 </div>
@@ -92,20 +106,7 @@ Make all horizontal
 				<li><a href="#">What We Do</a></li>
 				<li><a href="#">Careers</a></li>
 			</ul>
-			<ul>
-				<li><h5>Company</h5></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Meet The Team</a></li>
-				<li><a href="#">What We Do</a></li>
-				<li><a href="#">Careers</a></li>
-			</ul>
-			<ul>
-				<li><h5>Company</h5></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Meet The Team</a></li>
-				<li><a href="#">What We Do</a></li>
-				<li><a href="#">Careers</a></li>
-			</ul>
+			
 		</div>
 		<div class="clear"></div>
 	</div>
