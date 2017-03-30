@@ -90,7 +90,7 @@
 <footer>
 	<div class="wrapper">
 		<div id="footer-info">
-			<p>Copyright 2017 CompanyName. All rights reserved.</p>
+			<p>Copyright 2017 OhElEx.</p>
 			<p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
 		</div>
 		<div id="footer-links">
