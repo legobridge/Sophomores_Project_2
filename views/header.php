@@ -32,12 +32,12 @@
 
                 <ul>
                 <?php if (!empty($_SESSION["id"])): ?>
-                <li><a href="../public/sell.php">Sell An Item</a></li>
-                <li><a href="../public/changepwd.php">Change Password</a></li>
+                    <li class="topnavlink"><a href="../public/sell.php">Sell An Item</a></li>
+                    <li class="topnavlink"><a href="../public/changepwd.php">Change Password</a></li>
                 <?php endif ?>
-                <li><a href="../public/store.php">Go to Store</a></li>
+                    <li class="topnavlink"><a href="../public/store.php">Go to Store</a></li>
                 <?php if (!empty($_SESSION["id"])): ?>
-                <li><a href="../public/logout.php"><strong>Log Out</strong></a></li>
+                    <li class="topnavlink"><a href="../public/logout.php">Log Out</a></li>
                 <?php endif ?>
                 </ul>
             </div>

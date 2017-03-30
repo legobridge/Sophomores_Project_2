@@ -1,30 +1,25 @@
 <?php 
-    //dump($values); 
+    // dump($values); 
 ?>
-<div id="heading">
-<a name="top"></a>
-</div>
-<div id="navcol">
-<nav>
-<div id="navigation">
-<ul>
-<a href="#"><li>Books</li></a>
-<a href="#"><li>Sports</li></a>
-<a href="#"><li>Fashion</li></a>
-<a href="#"><li>Food</li></a>
-<a href="#"><li>PC Accessories</li></a>
-<a href="#"><li>Electronics</li></a>
-</ul>
-</div>
-</nav>
-</div>
-<!--
-Now to have various category
 
-First Category-Top Sales like Kindle,PS4,Music Player,Jackets
-Make all horizontal
--->
-<center><div class="products" style="max-width:900px;display:inline-block">
+<div id="navcol">
+    <nav>
+        <div id="navigation">
+            <ul>
+                <a href="../public/store.php?category=books"><li>Books</li></a>
+                <a href="../public/store.php?category=clothing"><li>Clothing</li></a>
+                <a href="../public/store.php?category=electronics"><li>Electronics</li></a>
+                <a href="../public/store.php?category=furniture"><li>Furniture</li></a>
+                <a href="../public/store.php?category=sports"><li>Sports</li></a>
+                <a href="../public/store.php?category=vehicles"><li>Vehicles</li></a>
+                <a href="../public/store.php?category=all"><li>All Items</li></a>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<center>
+    <div class="products" style="max-width:900px;display:inline-block">
                 <h1>Best of Fashion</h1>
 				<div class="cl">&nbsp;</div>
 				<ul>
@@ -87,9 +82,9 @@ Make all horizontal
 				<div class="cl">&nbsp;</div>
 			</div>
 			<!-- End Products -->
-			<!-- Add other contents here like books,games....-->
-		</div></center>
-		<!-- End Content -->
+		</div>
+</center>
+<!-- End Content -->
 
 </div>
 <footer>
@@ -110,7 +105,10 @@ Make all horizontal
 		</div>
 		<div class="clear"></div>
 	</div>
-</footer><div class="footer" id="footer">
-<center><a href="#top"><button id="back">Back to Top</button></a></center>
+</footer>
+<div class="footer" id="footer">
+    <center>
+        <a href="#top"><button id="back">Back to Top</button></a>
+    </center>
 </div>
 

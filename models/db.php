@@ -99,9 +99,8 @@
     function get_category_items($category)
    	{
         global $mysqli;
-        echo "boobs";
-        echo $category;
         
+        $category = $mysqli -> real_escape_string($category);
         // Formulate query string
         if ($category == 'all')
         {

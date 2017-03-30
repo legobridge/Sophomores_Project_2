@@ -11,8 +11,15 @@
     margin: 0 auto;
     margin-bottom: 15px;
     margin-top: 15px;
-    max-width: 80%;
+    max-width: 90%;
     height: auto;
+}
+
+.topnavlink
+{
+    display: inline-block;
+    font-weight: 900;
+    margin: 8px;
 }
 
 table, th, td 

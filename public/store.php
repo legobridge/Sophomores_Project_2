@@ -5,10 +5,10 @@
 
     $category = 'all';
     
-    // if user reached page via POST (as by submitting a form via POST)
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    // if $_GET["category"] is not empty
+    if (!empty($_GET["category"]))
     {
-        $category = $_POST["$category"];
+        $category = $_GET["category"];
     }
     
     $rows = get_category_items($category);
