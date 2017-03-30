@@ -10,7 +10,7 @@
         $rows = get_user_items($_SESSION["id"]);
     }
     
-    $rows["title"] = "Store";
+    $rows["title"] = "Dashboard";
     
     render("dashboard.php", $rows);
 ?>
