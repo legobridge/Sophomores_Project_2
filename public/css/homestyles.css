@@ -1,7 +1,7 @@
 #navigation
 {
     max-width: 100%;
-    background-color:black;
+    background-color:rgb(14, 43, 87);
     position:relative;
     height:auto;
 }
@@ -11,7 +11,7 @@
     max-width:100%;
     background-color:grey;
     font-weight:bold;
-    color:black;
+    color:rgb(19, 40, 71);
     border-right:1px solid #990000;
     font-size:30px;
     margin-right: 1%; 
