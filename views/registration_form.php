@@ -3,7 +3,7 @@
         <div id="signup" background-color:"white">   
           <h1>Sign Up for Free</h1>
           
-          <form action="../public/register.php" method="post" name="myForm" onsubmit="return validate(); required">
+          <form action="/register.php" method="post" name="myForm" onsubmit="return validate(); required">
           
          
             <div class="field-wrap">
@@ -47,5 +47,5 @@
       </div><!-- tab-content -->
 </div> <!-- /form -->
 <div>
-    or <a href="../public/login.php">login</a> to an account
+    or <a href="/login.php">login</a> to an account
 </div>

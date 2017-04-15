@@ -22,10 +22,10 @@
         {
             $name = $values[$count - 1]["name"];
             $store_id = $values[$count - 1]["id"];
-            $img_target = "../models/img/" . $store_id;
+            $img_target = "/img/usr/" . $store_id;
             if (!file_exists($img_target))
             {
-                $img_target = "../models/img/default.jpg";
+                $img_target = "/img/usr/default.jpg";
             }
             $description = $values[$count - 1]["description"];
             $price = $values[$count - 1]["price"];

@@ -6,16 +6,16 @@
     if (!in_array(
         $_SERVER["PHP_SELF"],
         [
-            "/Project_2/public/store.php",
-            "/Project_2/public/login.php",
-            "/Project_2/public/logout.php",
-            "/Project_2/public/register.php"
+            "/store.php",
+            "/login.php",
+            "/logout.php",
+            "/register.php"
             ]
         ))
     {
         if (empty($_SESSION["id"]))
         {
-            redirect("/Project_2/public/login.php");
+            redirect("/login.php");
         }
     }
     

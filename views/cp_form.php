@@ -1,6 +1,6 @@
   <div class="form">
         <center><h2>Password Change</h2></center>
-        <form id="change_pwd" action="../public/changepwd.php" method="post">
+        <form id="change_pwd" action="/changepwd.php" method="post">
               <div class="field-wrap">
                 <label>
                   <span class="req" name="pass">*</span>

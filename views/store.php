@@ -3,13 +3,13 @@
     <nav>
         <div id="navigation">
             <ul>
-                <a href="../public/store.php?category=books"><li>Books</li></a>
-                <a href="../public/store.php?category=clothing"><li>Clothing</li></a>
-                <a href="../public/store.php?category=electronics"><li>Electronics</li></a>
-                <a href="../public/store.php?category=furniture"><li>Furniture</li></a>
-                <a href="../public/store.php?category=sports"><li>Sports</li></a>
-                <a href="../public/store.php?category=vehicles"><li>Vehicles</li></a>
-                <a href="../public/store.php?category=all"><li>All Items</li></a>
+                <a href="/store.php?category=books"><li>Books</li></a>
+                <a href="/store.php?category=clothing"><li>Clothing</li></a>
+                <a href="/store.php?category=electronics"><li>Electronics</li></a>
+                <a href="/store.php?category=furniture"><li>Furniture</li></a>
+                <a href="/store.php?category=sports"><li>Sports</li></a>
+                <a href="/store.php?category=vehicles"><li>Vehicles</li></a>
+                <a href="/store.php?category=all"><li>All Items</li></a>
             </ul>
         </div>
     </nav>
@@ -40,10 +40,10 @@
         {
             $name = $values[$count - 1]["name"];
             $store_id = $values[$count - 1]["id"];
-            $img_target = "../models/img/" . $store_id;
+            $img_target = "/img/usr/" . $store_id;
             if (!file_exists($img_target))
             {
-                $img_target = "../models/img/default.jpg";
+                $img_target = "/img/usr/default.jpg";
             }
             $description = $values[$count - 1]["description"];
             $price = $values[$count - 1]["price"];
