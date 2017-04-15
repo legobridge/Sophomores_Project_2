@@ -100,7 +100,7 @@
             $target_file = "/img/usr/" . $rows["id"];
             if (!move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file))
             {
-                apologize("Sorry, there was an error uploading your file.");
+                apologize("Sorry, there was an error uploading your file.\nHowever your item has been added to the store.");
             }
         }
     }
