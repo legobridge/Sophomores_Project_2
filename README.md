@@ -6,7 +6,7 @@ cs50 appliance's vhosts/localhost/public/ folder) go to commit 87d0bf01024c78e47
 The current version of the app is optimized for the online CS50 IDE (as of now
 image uploads do not work due to this restriction).
 
-It consists of four folders (I've highlighted the more important files only):
+It consists of four folders (We've highlighted the more important files only):
 
 * controllers:
     - session.php -> If nobody is logged in, redirect to login.php
@@ -45,7 +45,7 @@ All that is required to be done to run this app right now is:
 3. Type "mysql50 start".
 4. I've already set up the phpmyadmin requirements, but if someone wanted to do 
    the work themselves, they could do so by going to https://ide50-nickfury95.cs50.io/phpmyadmin/
-   and signing in with the username and password "nickfury95" and "" respectively, and adding a user
+   and signing in with the username and password "nickfury95" and "v1kCjsvLYytrBTGV" respectively, and adding a user
    with credentials "jharvard" and "crimson" for localhost respectively. The SQL required before the
    app is fully functional is given in the file "sql_required.sql". Run that in phpmyadmin and you're
    good to go.
