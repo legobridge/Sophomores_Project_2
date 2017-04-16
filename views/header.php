@@ -5,7 +5,6 @@
     <head>
 
         <link href="/css/styles.css" rel="stylesheet"/>
-        <link href="/css/sellstyles.css" rel="stylesheet"/>
         <link href="/css/homestyles.css" rel="stylesheet"/>
         
         <?php if (isset($title)): ?>
